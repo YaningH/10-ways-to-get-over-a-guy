@@ -1,0 +1,99 @@
+body {
+    background-color: #000000; 
+    color: #8d0707;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap'); 
+  @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Pinyon+Script&display=swap');
+  
+  :root {
+  
+      /* VARIABLES */
+  
+      /* Typography */
+    --headingFont: 'DM Serif Display', sans-serif;
+    --bodyFont: 'DM Serif Display', sans-serif;
+  
+    --baseFontSize: clamp(0.75rem, 0.78rem + 0.38vw, 1.25rem);
+  
+    --type-scale: 1.57;
+  }
+  html {
+      font-size: var(--baseFontSize);
+      scroll-behavior: smooth;
+      font-family: var(--bodyFont);
+    }
+  
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--headingFont);
+      margin-bottom: var(--space-3);
+    }  
+
+        /* basic grids */
+    main {
+        width: 90vw;
+        margin: 0 auto;
+        }
+    .special-font {
+      font-family: 'Alex Brush', cursive;
+      font-size: 6rem; /* Adjust size to suit your design */
+      color: #8d0707; /* Optional: Keep or change the color */
+    }
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center;     /* Centers content horizontally */
+    text-align: center;
+    padding-bottom: 10%
+}
+
+.maingrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 0.5fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.maingrid li:nth-child(1) {
+  grid-row: 1 / span 2;
+  grid-column: 2 / span 3;
+  z-index: 2;
+}
+
+.maingrid li:nth-child(2) {
+  grid-row: 2 / span 3;
+  grid-column: 3 / span 4;
+  z-index: 1;
+  opacity: 50%;
+}
+
+.maingrid li:nth-child(3) {
+  grid-row: 3 / span 3;
+  grid-column: 1 / span 3;
+  z-index: 2;
+}
+
+
+  nav {
+    margin-left: 5vw;
+    height: 80px;
+    background: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px)/2);
+  }
+  nav a {
+      color: #8d0707;
+      padding: 0 1.5rem;
+  }
+  
+  figure img {
+    width: 100px;
+    height: auto;
+    margin-top: 3rem;
+  }
+  
